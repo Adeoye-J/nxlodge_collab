@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.values-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    background-color: #1A1A1A;
+    color: #fff;
+}
+
+.values-text {
+    width: 40%;
+}
+
+.values-text h1 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+.values-text p {
+    line-height: 1.2rem;
+    font-size: .75rem;
+    max-width: 80%;
+    font-weight: 500;
+    color: #999999;
+}
+
+.values-details {
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 1px solid rgba(219, 205, 205, 0.18);
+    box-shadow: 0 0 12px 8px #262626;
+    border-radius: 12px;
+    padding: 10px;
+    background: #141414;
+    height: Hug (476px)px;
+    gap: 2px;
+    border: 1px 0px 0px 0px;
+}
+
+.values-content {
+    padding-block: 1rem;
+    padding-inline: .7rem;
+}
+
+.values-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.values-title h2 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.values-content p {
+    color: #999999;
+    font-size: .75rem;
+    max-width: 92%;
+    line-height: 1.2rem;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #A685FA;
+    padding: 10px;
+    cursor: pointer;
+    color: #A685FA;
+}
+
+@media screen and (max-width: 700px) {
+    .values-container{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .values-text {
+        width: 100%;
+    }
+
+    .values-details {
+        width: 100%;
+    }
+}

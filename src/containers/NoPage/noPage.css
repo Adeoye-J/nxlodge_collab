@@ -1,0 +1,10 @@
+.no-page {
+    background-color: #000;
+    color: #fff;
+    padding-block: 4rem;
+}
+
+.no-page p {
+    font-size: 3rem;
+    text-align: center;
+}

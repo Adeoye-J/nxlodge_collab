@@ -1,12 +1,6 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .start-container {
     padding-block: 3rem;
-    background-color: #1A1A1A;
+    background-color: #2E3B47;
     color: #fff;
     display: flex;
     align-items: center;
@@ -20,23 +14,42 @@
 .start-content h1 {
     margin-bottom: 1rem;
     font-weight: 600;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
 }
 
 .start-content p {
     line-height: 1.2rem;
-    font-size: .8rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
     max-width: 90%;
     font-weight: 500;
-    color: #999999;
 }
 
-.start-button a{
-    display: block;
-    text-decoration: none;
-    background-color: #703BF7;
+.start-button button{
+    background-color: #31B6C4;
     color: #fff;
-    padding: 15px 20px;
+    height: 3.5rem;
+    padding-inline: 1rem;
     border-radius: 10px;
-    font-size: .8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 2px solid #31B6C4;
+    transition: all ease .5s;
+}
+
+.start-button button:hover {
+    background-color: #fff;
+    color: #31B6C4;
+}
+
+@media screen and (max-width: 1300px) {
+    .start-content {
+        width: 100%;
+    }
+
+    .start-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
 }

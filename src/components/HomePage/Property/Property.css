@@ -1,0 +1,103 @@
+.property {
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    border: 5px double #31B6C4;
+    border-radius: 15px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 300px;
+}
+
+.property .image-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.property .image-container img {
+    width: 100%;
+    height: 270px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.property .property-summary {
+    width: 100%;
+}
+
+.property .property-summary h2{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.property .property-summary > p {
+    font-size: .9rem;
+    line-height: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.property-summary .property-component {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-bottom: 1rem;
+}
+
+.property-component .comp {
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: .4rem .6rem;
+    text-wrap: nowrap;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3px;
+}
+
+.property-component .comp span {
+    font-size: .8rem;
+}
+
+.property-summary .offer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.offer .price-details {
+    width: 40%;
+}
+
+.offer .price-details p {
+    font-size: .9rem;
+    margin-bottom: .3rem;
+}
+
+.offer .price-details h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.offer button {
+    padding-block: 1rem;
+    padding-inline: .4rem;
+    font-size: .85rem;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid #31B6C4;
+    background-color: #31B6C4;
+    color: #fff;
+    cursor: pointer;
+    transition: all ease .5s;
+}
+
+.offer button:hover {
+    color: #000;
+    background-color: #fff;
+}

@@ -8,8 +8,16 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #141414;
-    padding-block: 20px;
+    padding-block: 10px;
+
+    position: fixed;
+    width: 100%;
+    z-index: 4;
+    transition: all ease-out .5s;
+}
+
+.scroll {
+    background-color: #31B6C4;
 }
 
 .logo {
@@ -20,6 +28,7 @@
 }
 
 .logo img {
+    cursor: pointer;
     width: 100%;
 }
 
@@ -27,9 +36,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* gap: 2rem; */
+    gap: 1rem; 
     list-style: none;
-    
+}
+
+.nav-list button {
+    display: none;
 }
 
 .nav-link {
@@ -37,17 +49,16 @@
     color: #fff;
     padding: 10px 15px;
     border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color ease-in .5s;
 }
-
-/* .make-active {
-    background-color: #000;
-} */
 
 .nav-link:hover {
     background-color: #000;
 }
 
-.nav-link:active {
+.make-active {
     background-color: #000;
 }
 
@@ -57,32 +68,53 @@
     gap: 1rem;
 }
 
-button {
-    padding: 10px 15px;
+.menu button {
+    font-size: 1rem;
+    height: 3rem;
+    padding-inline: 1rem;
     border-radius: 5px;
     border: none;
-    background-color: #000;
-    color: #fff;
     cursor: pointer;
+    transition: all ease-in .5s;
 }
 
-.login {
-    color: #A685FA;
+.menu button.contact {
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+}
+
+.menu button.contact:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+button.login {
+    color: #31B6C4;
     background-color: #fff;
     font-weight: bolder;
-    cursor: pointer;
 }
 
 .login:hover {
     color: #fff;
-    background-color: #A685FA;
+    background-color: #31B6C4;
 }
 
 .menu-bar {
     display: none;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1024px) {
+    .nav-list {
+        gap: 5px;
+    }
+    
+    .nav-link {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
     .nav-bar {
         display: none;
     }
@@ -118,5 +150,16 @@ button {
 
     .nav-link:hover {
         background-color: #141414;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .nav-list button {
+        display: block;
+    }
+
+    .menu button {
+        display: none;
     }
 }

@@ -1,7 +1,6 @@
 import React from 'react'
 import "./footer.css"
 import logo from "../../assets/nxlodgelogo.png"
-// import { MdEmail } from 'react-icons/md';
 import { FaEnvelope, FaRegEnvelope, FaEnvelopeOpen, FaRegEnvelopeOpen } from 'react-icons/fa';
 import { FaFacebook, FaTwitter, FaLinkedin, FaYoutube, FaPaperPlane  } from 'react-icons/fa';
 

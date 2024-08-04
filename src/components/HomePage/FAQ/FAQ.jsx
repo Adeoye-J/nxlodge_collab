@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { IoSparklesSharp } from "react-icons/io5";
-import { FaHandPointLeft, FaHandPointRight } from 'react-icons/fa'
+import {RiArrowDownDoubleFill, RiArrowUpDoubleFill} from "react-icons/ri"
 import "./faq.css"
-// import { FaStar } from "react-icons/fa"
 
 
 const FAQ = () => {
+
+    const [activeFaq, setActiveFaq] = useState(null)
 
     const faquestions = [
         {
@@ -45,26 +46,34 @@ const FAQ = () => {
         },
     ]
 
+    const handleFaq = (id) => {
+        setActiveFaq(activeFaq === id ? null : id)
+    }
+
   return (
     <div className='faq-container section-padding'>
         <div className="faq-intro">
-            {/* <div className="faq-intro"> */}
-                <IoSparklesSharp />
-                <h1>Frequently Asked Questions</h1>
-                <p>Find answers to common questions about NxLodge's services, property listings, and the real estate process. We're here to provide clarity and assist you every step of the way.</p>
-            {/* </div> */}
-            {/* <button>View All Properties</button> */}
+            <IoSparklesSharp />
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions about NxLodge's services, property listings, and the real estate process. We're here to provide clarity and assist you every step of the way.</p>
         </div>
-        <p className='scroll-info'>Scroll Left <FaHandPointLeft size={34} color="blue" /> or Right <FaHandPointRight size={34} color="blue" /> for other FAQs.</p>
         <div className="faq-content">
             {
                 faquestions.map(faquestion => (
-                    <div className="faq-detail" key={faquestion.id}>
-                        <div className="faq-val">
-                            <h1>{faquestion.question}</h1>
-                            <p>{faquestion.response}</p>
-                            <button>Read More</button>
+                    <div className="faq-value" key={faquestion.id}>
+                        <div className="question" onClick={() => handleFaq(faquestion.id)}>
+                            <p>{faquestion.question}</p>
+                            <div className="down-arrow">
+                                {activeFaq == faquestion.id ? <RiArrowUpDoubleFill size={30} /> : <RiArrowDownDoubleFill size={30} /> }
+                            </div>
                         </div>
+                        {
+                            activeFaq == faquestion.id && 
+                            <div className="response">
+                                <div className="divider"></div>
+                                <p>{faquestion.response}</p>
+                            </div>
+                        }
                     </div>
                 ))
             }
